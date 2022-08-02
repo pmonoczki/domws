@@ -12,6 +12,9 @@
     </style>
 </head>
 <body>
+    <div>
+        <p>dom workshop</p>
+    </div>
     <h2 id="msg">Kiskecske</h2>
     <select id = "colorselector">
         <option>
@@ -58,6 +61,11 @@
 
     const first = document.querySelector("h2, p")
     first.style.backgroundColor = "red";
+
+    const pha = document.querySelector("div > p");
+    pha.class = "pStyle";
+
+
 </script>
 </body>
 </html>
