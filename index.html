@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -12,35 +12,49 @@
     </style>
 </head>
 <body>
-    <select id="select">
-        <option value="red">red</option>
-        <option value="green">green</option>
-        <option value="yellow">yellow</option>
+    <h2 id="msg">Kiskecske</h2>
+    <select id = "colorselector">
+        <option>
+            red
+        </option>
+        <option>
+            green
+        </option>
+        <option>
+            yellow
+        </option>
+        <option>
+            silver
+        </option>
     </select>
     <br>
-    <button id="button">GOMB</button>
+    <button id="gomb2">gomb</button>
     <p id="para" class="pStyle">Hello mindenki!</p>
-    <script>
-        const h1 = document.createElement("h1");
-        h1.innerText = "Szia mia";
-        document.body.appendChild(h1);
+<script>
+    const h1 = document.createElement("h1");
+    h1.innerText = "Szia mia";
+    document.body.appendChild(h1);
 
-        const paragraph = document.getElementById("para");
-        const h2 = document.createElement("h2");
-        h2.innerText = paragraph.innerHTML;
-        document.body.appendChild(h2);
+    const paragraph = document.getElementById('para');
+    const h2 = document.createElement('h2');
+    h2.innerText = paragraph.innerHTML;
+    document.body.appendChild(h2);
 
-        const colorPicker = document.getElementById("select");
-        colorPicker.addEventListener("change", function(evt) {
-            const button = document.getElementById("button");
-            button.style.background = evt.target.value;
-        });
+    let colorPicker = document.getElementById('colorselector');
+    colorPicker.addEventListener("change", function (evt){
+        let gomb = document.getElementById("gomb2");
+        gomb.style.backgroundColor = evt.target.value;
+    });
 
-        const pTag = document.querySelector("p");
-        console.log(pTag);
+    const p = document.querySelector("p");
+    console.log(p);
 
-        const pStyleQuery = document.querySelector(".pStyle");
-        console.log(pStyleQuery);
-    </script>
+    const pStyleQuery = document.querySelector(".pStyle");
+    console.log(pStyleQuery);
+
+    document.querySelector('#msg');
+    const Message = document.querySelector('#msg');
+    console.log(Message.innerText);
+</script>
 </body>
 </html>
