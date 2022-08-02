@@ -7,40 +7,41 @@
     <title>Document</title>
 </head>
 <body>
- <select id = "colorselector">
-    <option>
-        red
-    </option>
-    <option>
-        green
-    </option>
-    <option>
-        yellow
-    </option>
-    <option>
-        silver
-    </option>
- </select>   
-<br>
-<button id = "gomb">gomb</button>
-<p id = "para">Hello mindenki!</p>
-<script>
-    const h1 = document.createElement("h1");
-    h1.innerText = "Szia mia";
-    document.body.appendChild(h1);
+    <select id="colorselector">
+        <option>
+            red
+        </option>
+        <option>
+            green
+        </option>
+        <option>
+            yellow
+        </option>
+        <option>
+            silver
+        </option>
+    </select>
+    <br>
+    <button id="gomb">Gomb</button>
+    <p id="para">Hello mindenki!</p>
+    <script>
+        const h1 = document.createElement("h1");
+        h1.innerText = "Szia mia";
+        document.body.appendChild(h1);
 
-    const paragraph = document.getElementById("para");
-    const h2 = document.createElement("h2");
-    h2.innerText = paragraph.innerHTML;
-    document.body.appendChild(h2);
+        const paragraph = document.getElementById("para");
+        const h2 = document.createElement("h2");
+        h2.innerText = paragraph.innerHTML;
+        document.body.appendChild(h2);
 
-    let colorPicker = document.getElementById("colorselector");
-    colorPicker.addEventListener("change", function (evt){
-       let gomb = document.getElementById("gomb");
-       gomb.style.backgroundColor = evt.target.value;
-    });
-    
-    
-</script>
+        const colorPicker = document.getElementById("colorselector");
+        colorPicker.addEventListener("change", function(evt) {
+            const btn = document.getElementById("gomb");
+            btn.style.backgroundColor = evt.target.value;
+        });
+
+        const p = document.querySelector("p");
+        console.log(p);
+    </script>
 </body>
 </html>
