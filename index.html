@@ -7,10 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+  <p id="para">Hello mindenki!</p>
     <script>
         const h1 = document.createElement("h1");
         h1.innerText = "Szia mia";
         document.body.appendChild(h1);
+
+        const paragraph = document.getElementById('para');
+        const h2 = document.createElement('h2');
+        h2.innerText = paragraph.innerHTML;
+        document.body.appendChild(h2);
     </script>
 </body>
 </html>
