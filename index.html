@@ -16,6 +16,7 @@
         <p>dom workshop</p>
     </div>
     <h2 id="msg">Kiskecske</h2>
+    <h2>Kazánlemez</h2>
     <select id = "colorselector">
         <option>
             red
@@ -65,6 +66,11 @@
     const pha = document.querySelector("div > p");
     pha.class = "pStyle";
 
+    const h2List=document.querySelectorAll("h2");
+    console.log("=============================");
+    for(let i=0;i<h2List.length;i++){
+        console.log(h2List[i].innerText);
+    }
 
 </script>
 </body>
